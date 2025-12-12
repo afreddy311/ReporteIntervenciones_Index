@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal de Informes Regionales - ITP</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  /* Colores institucionales ITP aproximados */
+  :root {
+    --itp-rojo: #cc0033;
+    --itp-gris: #58595b;
+    --itp-gris-claro: #d9d9d9;
+  }
+  header {
+    background: var(--itp-rojo);
+    color: white;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .container {
+    padding: 20px 30px;
+  }
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+  }
+  .card h2 {
+    margin-top: 0;
+    color: var(--itp-gris);
+  }
+  .filters label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--itp-gris);
+  }
+  .filters select, .filters input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--itp-gris-claro);
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  .btn {
+    background: var(--itp-rojo);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background: #a30029;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  th {
+    background: var(--itp-gris-claro);
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+<header>ITP - Portal de Informes Regionales</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Filtrar Informes</h2>
+    <div class="filters">
+      <label>Región</label>
+      <select>
+        <option value="">Seleccione...</option>
+        <option>Lima</option>
+        <option>La Libertad</option>
+        <option>Piura</option>
+      </select>
+
+      <label>Periodo</label>
+      <select>
+        <option value="">Seleccione...</option>
+        <option>2023</option>
+        <option>2024</option>
+      </select>
+
+      <label>Tipo de Informe</label>
+      <input type="text" placeholder="Ej: Productividad, Servicios, AT, etc." />
+    </div>
+
+    <button class="btn">Buscar</button>
+  </div>
+
+  <div class="card">
+    <h2>Resultados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Región</th>
+          <th>Periodo</th>
+          <th>Título</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lima</td>
+          <td>2024</td>
+          <td>Informe de Servicios CITE</td>
+          <td><button class="btn">Ver</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>
